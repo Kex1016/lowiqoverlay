@@ -1,0 +1,22 @@
+{
+  "name": "strange-overlay",
+  "version": "1.0.0",
+  "description": "nope",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "compile": "pkg package.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "pkg": {
+    "assets": "src/pages/**/*",
+    "targets": [
+      "node18-win-x64",
+      "node18-linux-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "bin": "src/index.js"
+}

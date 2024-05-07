@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+:root {
+  --background: #292b2e;
+  --background-alt: #1a1a1a;
+  --text-regular: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+  background-color: black;
+  color: var(--text-regular);
+}
+
+#bar {
+  width: 100vw;
+  height: 30px;
+  max-height: 30px;
+  background-color: var(--background);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#date-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#date-container > div {
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#date-container > div > div {
+  background-color: var(--background-alt);
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#date-container > div::before,
+#date-container > div::after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 30px;
+  background-color: var(--background-alt);
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+#date-container > div::after {
+  margin-left: -1px;
+}
+
+#date-container > div::after {
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+#date-container > #day::after {
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+}
+
+#date-container > #date::before {
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+#name {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+#something {
+  margin-left: auto;
+  margin-right: 10px;
+}
